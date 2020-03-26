@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "Name": {
+            "value": "FactSet"
+        },
+        "TickerSymbol": {
+            "value": ""
+        },
+        "EntityId__c": {
+            "value": ""
+        }
+    }
+ }

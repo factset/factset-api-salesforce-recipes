@@ -1,0 +1,11 @@
+.signal-small-info {
+    padding: 10px;
+}
+
+.event-date {
+    float: left;
+}
+
+.activity-date {
+    float: right;
+}

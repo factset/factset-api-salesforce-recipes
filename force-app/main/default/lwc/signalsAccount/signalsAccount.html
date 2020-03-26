@@ -1,0 +1,26 @@
+<template>
+    <div if:true={isDesktop}>
+        <lightning-card title="Key Signals" icon-name="custom:custom14">
+            <lightning-accordion active-section-name="signalsAccount" if:true={fetchComplete}>
+                <template for:each={data} for:item="signal" for:index="index">
+                    <lightning-accordion-section key={signal.name} name={signal.name} label={signal.signal}>
+                        <p>{signal.detail}</p><br>
+                        <p class="event-date"><b>Event Date:</b> {signal.date}</p>
+                        <p class="activity-date"><b>Last Activity:</b> {lastActivityDate}</p><br>
+                    </lightning-accordion-section>
+                </template>
+            </lightning-accordion>
+        </lightning-card>
+    </div>
+    <div if:false={isDesktop}>
+        <template  for:each={data} for:item="signal" for:index="index" if:true={fetchComplete}>
+            <lightning-card title={signal.signal} key={signal.name} icon-name="custom:custom14">
+                <p class="signal-small-info">{signal.detail}</p>
+                <p class="signal-small-info event-date"><b>Event Date:</b> {signal.date}</p>
+                <p class="signal-small-info"><b>Last Activity:</b> {lastActivityDate}</p>
+            </lightning-card>
+        </template>
+    </div>
+    
+    <lightning-progress-bar value={progressPercentage} size="large" if:false={fetchComplete}></lightning-progress-bar>
+</template>

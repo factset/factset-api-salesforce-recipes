@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Key Signals" icon-name="custom:custom14">
+        <lightning-accordion active-section-name="signals" if:true={fetchComplete}>
+            <template  for:each={data} for:item="signal" for:index="index">
+                <lightning-accordion-section key={signal.name} name={signal.name} label={signal.label}>
+                    <p>{signal.detail}</p><br>
+                    <p class="event-date"><b>Event Date:</b> {signal.date}</p>
+                    <p class="activity-date"><b>Last Activity:</b> {signal.lastActivityDate}</p><br>
+                </lightning-accordion-section>
+            </template>
+        </lightning-accordion>
+        <lightning-progress-bar value={progressPercentage} size="large" if:false={fetchComplete}></lightning-progress-bar>
+    </lightning-card>
+</template>
