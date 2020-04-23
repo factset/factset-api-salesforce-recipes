@@ -17,8 +17,8 @@ const getSignalsData = async (tickers) => {
                 signalsData.push({
                     name: account,
                     signal: signal.meta.name,
-                    date: events[0].eventLatestDate,
-                    detail: events[0].properties.detailMessage.value,
+                    date: events[0].eventLatestDatetime,
+                    detail: events[0].properties.summary.value,
                     label: `${account}: ${signal.meta.name}`
                 });
             }

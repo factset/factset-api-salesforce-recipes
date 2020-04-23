@@ -53,6 +53,9 @@ More information on FactSet's API can be found [here](https://developer.factset.
     ```
     sfdx force:org:open
     ```
+
+1. Go to `Setup -> Security -> Remote Site Settings` and add the endpoint `https://api.factset.com`.
+
 1. Next, follow *How to add the components* section
 
 ### How to add the components 
@@ -81,7 +84,9 @@ More information on FactSet's API can be found [here](https://developer.factset.
 
 1. In Setup, click on **Edit Page**.
 
-1. In the *Components* list, under *Custom*, drag the `signalsAccount` component onto the page.
+1. In the *Components* list, under *Custom*, drag the `signalsAccount` or `signalsAccountTable` component onto the page.
+    * `signalsAccount` is a Lightning Web Component that uses the [lightning-accordion](https://developer.salesforce.com/docs/component-library/bundle/lightning-accordion/example) component to display the data
+    * `signalsAccountTable` is a Lightning Component that uses the [lightning-datatable](https://developer.salesforce.com/docs/component-library/bundle/lightning:datatable/example) component to display the data
 
 1. Click `Save`.
 

@@ -19,5 +19,12 @@ public with sharing class FetchSignals {
         }
         return 'Failed';
     }
+
+    @AuraEnabled(cacheable=false)
+    public static string getAccountTickerSymbol(Id accountId) {
+        String query = 'Select TickerSymbol FROM Account WHERE Id=\'' + accountId + '\'';
+        Sobject obj = Database.query(query); 
+        return String.valueOf(obj.get('TickerSymbol'));
+    }
 }
 
