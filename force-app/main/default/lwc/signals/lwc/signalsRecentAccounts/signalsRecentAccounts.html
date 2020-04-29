@@ -4,8 +4,12 @@
             <template  for:each={data} for:item="signal" for:index="index">
                 <lightning-accordion-section key={signal.name} name={signal.name} label={signal.label}>
                     <p>{signal.detail}</p><br>
-                    <p class="event-date"><b>Event Date:</b> {signal.date}</p>
-                    <p class="activity-date"><b>Last Activity:</b> {signal.lastActivityDate}</p><br>
+                    <p class="event-date">
+                        <b>Event Date: </b> <lightning-formatted-date-time value={signal.date} year="numeric" month="long" day="2-digit" weekday="long"></lightning-formatted-date-time>
+                    </p>
+                    <p class="activity-date">
+                        <b>Last Activity: </b> <lightning-formatted-date-time value={signal.lastActivityDate} year="numeric" month="long" day="2-digit" weekday="long"></lightning-formatted-date-time>
+                    </p><br>
                 </lightning-accordion-section>
             </template>
         </lightning-accordion>
