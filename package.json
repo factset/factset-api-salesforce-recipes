@@ -1,8 +1,8 @@
 {
-  "name": "salesforce-app",
+  "name": "factset-api-salesforce-recipes",
   "private": true,
   "version": "1.0.0",
-  "description": "Salesforce App",
+  "description": "FactSet API Salesforce Recipes",
   "scripts": {
     "lint": "npm run lint:lwc",
     "lint:lwc": "eslint force-app/main/default/lwc",

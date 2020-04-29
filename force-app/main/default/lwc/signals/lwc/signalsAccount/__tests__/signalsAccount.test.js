@@ -28,7 +28,6 @@ describe('c-signals-account', () => {
     });
 
     it('should get signals on account data trigger', () => {
-        getConcordanceTickers.mockResolvedValue([]);
         getSignalsData.mockResolvedValue([]);
         const element = createElement('c-signals-account', {
             is: SignalsAccount
@@ -42,7 +41,6 @@ describe('c-signals-account', () => {
     });
 
     it('should not get signals on account data trigger when FactSet ticker is not present', () => {
-        getConcordanceTickers.mockResolvedValue([]);
         getSignalsData.mockResolvedValue([]);
         const element = createElement('c-signals-account', {
             is: SignalsAccount

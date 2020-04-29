@@ -4,10 +4,10 @@
             "value": "FactSet"
         },
         "TickerSymbol": {
-            "value": ""
-        },
-        "EntityId__c": {
             "value": "FDS-US"
+        },
+        "LastActivityDate": {
+            "value": ""
         }
     }
  }

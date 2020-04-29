@@ -1,4 +1,4 @@
-# FactSet API Demo
+# FactSet API Salesforce Recipes
 
 A collection of code examples for Lightning Web Components using FactSet's APIs. FactSet offers powerful APIs to help integrate your financial data needs within your applications, web portals and statistical packages.
 

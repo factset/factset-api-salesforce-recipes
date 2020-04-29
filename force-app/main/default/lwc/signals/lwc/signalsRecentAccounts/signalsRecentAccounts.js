@@ -2,7 +2,7 @@ import { track, LightningElement } from 'lwc';
 import { getSignalsData } from 'c/shared';
 import fetchRecentItems from '@salesforce/apex/CommonMethods.fetchRecentItems';
 
-export default class Signals extends LightningElement {
+export default class SignalsRecentAccounts extends LightningElement {
     @track data = [];
     @track progressPercentage = 0;
     @track fetchComplete = false;

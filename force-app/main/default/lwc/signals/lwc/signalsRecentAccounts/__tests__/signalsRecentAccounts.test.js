@@ -1,5 +1,5 @@
 import { createElement } from 'lwc';
-import Signals from 'c/signals';
+import SignalsRecentAccounts from 'c/signalsRecentAccounts';
 import fetchRecentItems from '@salesforce/apex/CommonMethods.fetchRecentItems';
 import { getSignalsData } from 'c/shared';
 
@@ -15,7 +15,7 @@ jest.mock('c/shared', () => {
     }
 }, { virtual: true });
 
-describe('c-signals', () => {
+describe('c-signals-recent-accounts', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
         while (document.body.firstChild) {
@@ -24,7 +24,28 @@ describe('c-signals', () => {
     });
 
     it('should be defined', () => {
-        expect(Signals).toBeDefined();
+        expect(SignalsRecentAccounts).toBeDefined();
+    });
+
+    it('should not call getSignalsData when no ID present', () => {
+        fetchRecentItems.mockResolvedValue([
+            {
+                'TickerSymbol': "",
+                'Name': 'FactSet'
+            }
+        ]);
+        getSignalsData.mockResolvedValue([]);
+        const element = createElement('c-signals-recent-accounts', {
+            is: SignalsRecentAccounts
+        });
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => {
+            expect(fetchRecentItems).toHaveBeenCalledWith({numberOfAccounts: '5'});
+            return Promise.resolve().then(() => {
+                expect(getSignalsData).not.toHaveBeenCalled();
+            });
+        });
     });
 
     it('should fetch recent items on connect callback', () => {
@@ -35,8 +56,8 @@ describe('c-signals', () => {
             }
         ]);
         getSignalsData.mockResolvedValue([]);
-        const element = createElement('c-signals', {
-            is: Signals
+        const element = createElement('c-signals-recent-accounts', {
+            is: SignalsRecentAccounts
         });
         document.body.appendChild(element);
 
@@ -44,27 +65,6 @@ describe('c-signals', () => {
             expect(fetchRecentItems).toHaveBeenCalledWith({numberOfAccounts: '5'});
             return Promise.resolve().then(() => {
                 expect(getSignalsData).toHaveBeenCalledWith(['FDS-US']);
-            });
-        });
-    });
-
-    it('should not call getSignalsData when no ID present', () => {
-        fetchRecentItems.mockResolvedValue([
-            {
-                'TickerSymbol': '',
-                'Name': 'FactSet'
-            }
-        ]);
-        getSignalsData.mockResolvedValue([]);
-        const element = createElement('c-signals', {
-            is: Signals
-        });
-        document.body.appendChild(element);
-
-        return Promise.resolve().then(() => {
-            expect(fetchRecentItems).toHaveBeenCalledWith({numberOfAccounts: '5'});
-            return Promise.resolve().then(() => {
-                expect(getSignalsData).not.toHaveBeenCalled();
             });
         });
     });
