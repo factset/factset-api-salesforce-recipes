@@ -28,18 +28,18 @@ More information on FactSet's API can be found [here](https://developer.factset.
 1. Clone the factset-api-demo repository:
 
     ```
-    git clone https://github.com/factset/factset-api-demo
-    cd factset-api-demo
+    git clone https://github.com/factset/factset-api-salesforce-recipes
+    cd factset-api-salesforce-recipes
     ```
 
 1. Create a Developer API Key by [following the instructions here](https://developer.factset.com/authentication).
 
-1. Replace `<MY-API-KEY>` in the file `force-app\main\default\classes\FetchSignals.cls` with the newly generated API Key.
+1. Replace `<MY-API-KEY>` in the file `force-app\main\default\classes\signals\FetchSignals.cls` with the newly generated API Key.
 
-1. Create a scratch org and provide it with an alias (**factset-api-demo** in the command below):
+1. Create a scratch org and provide it with an alias (**factset-api-salesforce-recipes** in the command below):
 
     ```
-    sfdx force:org:create -s -f config/project-scratch-def.json -a factset-api-demo
+    sfdx force:org:create -s -f config/project-scratch-def.json -a factset-api-salesforce-recipes
     ```
 
 1. Push the app to your scratch org:
@@ -60,7 +60,7 @@ More information on FactSet's API can be found [here](https://developer.factset.
 
 ### How to add the components 
 
-#### Signals API components
+#### **Signals API components**
 
 ##### Multiple Accounts Signals Component
 
@@ -68,7 +68,7 @@ More information on FactSet's API can be found [here](https://developer.factset.
 
 1. In Setup, click on **Edit Page**.
 
-1. In the *Components* list, under *Custom*, drag the `signals` component onto the page.
+1. In the *Components* list, under *Custom*, drag the `signalsRecentAccounts` component onto the page.
 
 1. Click `Save`.
 
