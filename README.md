@@ -10,6 +10,16 @@ More information on FactSet's API can be found [here](https://developer.factset.
 
 ## Installation Instructions
 
+### Prerequisites
+
+This is a list of tools that you will require for using and developing the recipes:
+
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://classic.yarnpkg.com/en/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli)
+- [Code formatting and linting](#Optional-Installation-Instructions)
+
 ### Installing Recipes using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
@@ -58,11 +68,11 @@ More information on FactSet's API can be found [here](https://developer.factset.
 
 1. Next, follow *How to add the components* section
 
-### How to add the components 
+## How to add the components 
 
-#### **Signals API components**
+### **Signals API components**
 
-##### Multiple Accounts Signals Component
+#### Multiple Accounts Signals Component
 
 1. In App Launcher, click **View All** then select the **Sales** app. This will load the *Home* page.
 
@@ -76,7 +86,7 @@ More information on FactSet's API can be found [here](https://developer.factset.
 
 *Accounts need to have the `Ticker Symbol` filled with a valid stock ticker*
 
-##### Single Account Signals Component
+#### Single Account Signals Component
 
 1. In App Launcher, click **View All** then select the **Sales** app. This will load the *Home* page.
 
@@ -91,3 +101,18 @@ More information on FactSet's API can be found [here](https://developer.factset.
 1. Click `Save`.
 
 *The account needs to have the `Ticker Symbol` filled with a valid stock ticker*
+
+
+1. In App Launcher, select the **LWC** app.
+
+## Optional Installation Instructions
+
+This repository contains several files that are relevant if you want to integrate modern web development tooling to your FactSet API Recipes development processes, or to your continuous integration/continuous deployment processes.
+
+### Code formatting
+
+[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
+
+### Code linting
+
+[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) from the Visual Studio Code Marketplace. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lightning Web Components development.
