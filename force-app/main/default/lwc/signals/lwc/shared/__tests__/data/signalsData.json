@@ -4,7 +4,7 @@
         "isNear3YearHigh": {
           "events": [
             {
-              "eventLatestDatetime": "2020-01-30",
+              "eventLatestDatetime": "2020-01-30T08:10:14.297Z",
               "properties": {
                 "summary": {
                   "description": "Detail message for approaching 3-year high price",
@@ -28,7 +28,7 @@
         "isNear3YearHigh": {
           "events": [
             {
-              "eventLatestDatetime": "2020-01-30",
+              "eventLatestDatetime": "2020-01-30T08:10:14.297Z",
               "properties": {
                 "summary": {
                   "description": "Detail message for approaching 3-year high price",

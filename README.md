@@ -90,4 +90,4 @@ More information on FactSet's API can be found [here](https://developer.factset.
 
 1. Click `Save`.
 
-*The account need to have the `Ticker Symbol` filled with a valid stock ticker*
+*The account needs to have the `Ticker Symbol` filled with a valid stock ticker*
