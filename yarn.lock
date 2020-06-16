@@ -964,6 +964,11 @@
   resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.4.1.tgz#812cee8ab00a08616ed9490f49f599622e1f6bf1"
   integrity sha512-ei8PFAn19mAx81egzeSYA7y07Myn6IsAVC3ZeP8IpxQ+PI+YaER8Uxh6l04ja6cV1mZ07SzALNsxIQ8x+Q5Jrg==
 
+"@salesforce/wire-service-jest-util@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.4.2.tgz#dd61563e55337c5420e3ae2137d10cd3b1711e40"
+  integrity sha512-yYf1AUhvxhEP9fJLrakogkdbNtrBiRprED+N6Vd3oGydDZrShdPwmYgqLKkzFR0HUw00LiSWaUO19yS1z6n0HA==
+
 "@types/babel__core@^7.1.0":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.7.tgz#1dacad8840364a57c98d0dd4855c6dd3752c6b89"
